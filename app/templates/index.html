@@ -9,9 +9,11 @@
   {% endif %}
 </head>
 <body>
-
+    {% extends 'base.html'%}
     {% import 'macros.html' as macro%}
 
+    <!-- Content block -->
+    {% block content %}
 
   <!-- Science section  -->
   <h3> Science </h3>
@@ -43,5 +45,7 @@
   <ul>
       {{ macro.displayNewsList(technology)}}
   </ul>
+
+  {% endblock%}
 </body>
 </html>
