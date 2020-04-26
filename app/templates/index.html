@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -11,12 +9,39 @@
   {% endif %}
 </head>
 <body>
-  <!-- Popular news section  -->
-          <h3> Popular News</h3>
-           <ul>
-              {% for popular_news in popular %}
-                  <li>{{ popular_news.title}}</li>
-              {% endfor %}
-          </ul>
+
+    {% import 'macros.html' as macro%}
+
+
+  <!-- Science section  -->
+  <h3> Science </h3>
+  <ul>
+    {{ macro.displayNewsList(science)}}
+
+  </ul>
+
+  <!-- entertainment section  -->
+  <h3> Entertainment </h3>
+  <ul>
+  {{ macro.displayNewsList(entertainment)}}
+  </ul>
+
+  <!-- Health section  -->
+  <h3> Health </h3>
+  <ul>
+  {{ macro.displayNewsList(health)}}
+  </ul>
+
+  <!-- Sports section  -->
+  <h3> Sports </h3>
+  <ul>
+    {{ macro.displayNewsList(sports)}}
+  </ul>
+
+  <!-- Technology section  -->
+  <h3> Technology </h3>
+  <ul>
+      {{ macro.displayNewsList(technology)}}
+  </ul>
 </body>
 </html>

@@ -18,14 +18,14 @@ def get_news(category):
     get_news_url = base_url.format(category,api_key)
 
     with urllib.request.urlopen(get_news_url) as url:
-        get_news_date = url.read()
+        get_news_data = url.read()
         get_news_response = json.loads(get_news_data)
 
         news_results = None
 
-        if get_news_response['results']:
-            news_results_list = get_news_response['results']
-            new_results = process_results(news_results_list)
+        if get_news_response['articles']:
+            news_results_list = get_news_response['articles']
+            news_results = process_results(news_results_list)
 
     return news_results
 
@@ -48,5 +48,9 @@ def process_results(news_list):
         description = news_item.get('description')
         url = news_item.get('url')
         content = news_item.get('content')
+
+        if description:
+            news_object = News(name,author,title,description,url,content)
+            news_results.append(news_object)
 
     return news_results
