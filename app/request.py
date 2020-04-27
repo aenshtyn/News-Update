@@ -1,6 +1,6 @@
 from app import app
 import urllib.request,json
-from .models import news
+from .models import news,source
 
 News = news.News
 
@@ -31,7 +31,7 @@ def get_news(category):
 
 def process_results(news_list):
     '''
-    Function that processes the news result and transfomr into a list of objects
+    Function that processes the news result and transforms into a list of objects
 
 
     Args:
@@ -47,10 +47,11 @@ def process_results(news_list):
         title = news_item.get('title')
         description = news_item.get('description')
         url = news_item.get('url')
-        content = news_item.get('content')
+        image = news_item.get('urlToImage')
+
 
         if description:
-            news_object = News(name,author,title,description,url,content)
+            news_object = News(name,author,title,description,url,image)
             news_results.append(news_object)
 
     return news_results

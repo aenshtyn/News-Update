@@ -9,4 +9,3 @@ class News:
         self.description = description
         self.url = url
         self.image = image
-        self.date = date
