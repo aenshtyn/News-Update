@@ -3,7 +3,7 @@ from . import main
 from ..request import get_news, get_article
 
 # Views
-@app.route('/')
+@main.route('/')
 def index():
 
     '''
@@ -18,7 +18,7 @@ def index():
     print(science)
     title = 'Home - Your best news Source'
     return render_template('index.html', title = title,science = science, entertainment = entertainment, health = health, sports = sports, technology = technology)
-@app.route('/news/<int:title>')
+@main.route('/news/<int:title>')
 def news(title):
 
     '''
