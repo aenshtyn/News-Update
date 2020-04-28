@@ -1,35 +1,34 @@
 
 
-# Project Name.
-News Updates app
-
-###Live link
-https://moha-news-update.herokuapp.com/
+# Project Name
 
 
-##Built by
+## News Updates app (https://moha-news-update.herokuapp.com)/
+
+
+#### Built by
 
 Mohamed Abdullahi  
 
-##Description
+## Description
 
 This is a webapp that should be showing different news webites and once clicked they should redirect the user to read it from the source website. This app is built using the NEWS_API_KEY
 
 ## Setup/Installation Requirements
 
-
-###Prerequisites
 python3.6
 pip
 virtualenv
 
 
-###Cloning
+## Cloning
 In your terminal:
 
   $ git clone https://github.com/aenshtyn/News-Update
   $ cd News-Update
+## Known Bugs
 
+The images arent showing as needed.
 
 ## Technologies Used
 
