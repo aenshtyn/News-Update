@@ -17,7 +17,7 @@ def get_news(category):
     Function that gets the json response to out url request
     '''
 
-    get_news_url = base_url.format(category,api_key)
+    get_news_url = base_url.format(category)
 
     with urllib.request.urlopen(get_news_url) as url:
         get_news_data = url.read()

@@ -15,9 +15,9 @@ def index():
     sports = get_news('sports')
     technology = get_news('technology')
 
-    print(science)
     title = 'Home - Your best news Source'
     return render_template('index.html', title = title,science = science, entertainment = entertainment, health = health, sports = sports, technology = technology)
+
 @main.route('/news/<int:title>')
 def news(title):
 
