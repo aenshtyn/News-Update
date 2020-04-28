@@ -20,13 +20,13 @@ This is a webapp that should be showing different news webites and once clicked 
 
 ## Setup/Installation Requirements
 
-*python3.6
-*pip
-*virtualenv
+* python3.7
+* pip
+* virtualenv
 
 
 ## Cloning
-*In your terminal:
+* In your terminal:
 
   $ git clone https://github.com/aenshtyn/News-Update/
 
@@ -35,15 +35,15 @@ This is a webapp that should be showing different news webites and once clicked 
 ## Running the Application
 * Creating the virtual environment
 
-        $ python3.6 -m venv --without-pip virtual
+        $ python3.7 -m venv --without-pip virtual
         $ source virtual/bin/env
         $ curl https://bootstrap.pypa.io/get-pip.py | python
 
 * Installing Flask and other Modules
 
-        $ python3.6 -m pip install Flask
-        $ python3.6 -m pip install Flask-Bootstrap
-        $ python3.6 -m pip install Flask-Script
+        $ python3.7 -m pip install Flask
+        $ python3.7 -m pip install Flask-Bootstrap
+        $ python3.7 -m pip install Flask-Script
 
 * Setting up the API Key
 
@@ -54,7 +54,7 @@ This is a webapp that should be showing different news webites and once clicked 
         * Insert the following info into it:
 
                 export NEWS_API_KEY='<Your-Api-Key>'
-                python3.6 manage.py server
+                python3.7 manage.py server
 
         * Insert the API Key you received from News Api where <Your-Api-Key> is.
 
@@ -66,7 +66,7 @@ This is a webapp that should be showing different news webites and once clicked 
 ## Testing the Application
 * To run the tests for the class files:
 
-        $ python3.6 manage.py tests
+        $ python3.7 manage.py tests
 
 
 ## Known Bugs
