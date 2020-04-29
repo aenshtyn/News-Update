@@ -1,39 +1,13 @@
-{% macro displaySourcesList(sources_list) %}
-	{% for source in sources_list %}
-	<a href="/source/{{source.id}}">
-		<div class="col-md-2" class="source">
+{% macro displaySourceList(source_list) %}
 
-					<p class="text-center" style="font-style: bold;font-size: 18px;background-color: rgba(0,0,0,1);">{{source.name}}</p>
-
-		</div>
-	</a>
-	{% endfor %}
-{% endmacro %}
-
-{% macro displayNewsList(news_list) %}
-
-    {% for news in news_list %}
-
-
-
-    <div class="row" style="padding: 5px">
-      <div class="col-md-3" style="text-align: center">
-        <img src="{{news.image}}" alt="{{news.title}}" style="width: 100%; height: 100%">
+    {% for source in source_list %}
+    <div class="col-xs-12 col-sm-4 col-md-2 col-lg-2 movie-card">
+       <li class="text-center">
+          <a href="/source/{{source.id}}">
+         {{ source.id }}
+        </li>
       </div>
-      <div class="col-md-9">
-        <a target="_blank" href="{{news.url}}">
-          <h4 style="font-weight: 700">{{news.title}}</h4>
-        </a>
-        <p><small style="font-style: italic;">written by {{news.author}} on {{news.date}}</small></p>
-        <p>{{news.description | truncate(135)}}</p>
-        <a target="_blank" href="{{news.url}}">
-          <button class="btn btn-sm btn-default" style="color: #0d47a1">Read more</button>
-        </a>
-      </div>
-    </div>
 
-
-        <li>{{ news.title}}</li>
     {% endfor %}
 
 {% endmacro %}

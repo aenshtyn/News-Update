@@ -1,18 +1,7 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <meta charset="utf-8">
-  {% if title %}
-  <title> {{ title }}</title>
-  {% else %}
-  <title> Find all the latest news and those that you missed</title>
-  {% endif %}
-</head>
-<body>
-    {% extends 'base.html'%}
-    {% import 'macros.html' as macro%}
+{% extends 'base.html'%}
+{% import 'macros.html' as macro%}
 
-    <!-- Styles block -->
+<!-- Styles block -->
 
 {% block styles%}
     {{ super() }}
@@ -20,44 +9,48 @@
 {% endblock %}
 
 
-    <!-- Content block -->
-    {% block content %}
-    >
-    <main class="container-fluid">
-  <!-- Science section  -->
-  <hr />
- <div class="source_section">
-  <h3> Science </h3>
-  <ul>
-    {{ macro.displayNewsList(science)}}
+{% block content %}
 
-  </ul>
-  </div>
+        <!-- Business source section  -->
+        <h3> Business sources</h3>
+         <ul>
+           {{ macro.displaySourceList(business)}}
+        </ul>
 
-  <!-- entertainment section  -->
-  <h3> Entertainment </h3>
-  <ul>
-  {{ macro.displayNewsList(entertainment)}}
-  </ul>
+        <!-- General source section  -->
+        <h3> General sources</h3>
+         <ul>
+           {{ macro.displaySourceList(general)}}
+        </ul>
 
-  <!-- Health section  -->
-  <h3> Health </h3>
-  <ul>
-  {{ macro.displayNewsList(health)}}
-  </ul>
+        <!-- Science source section  -->
+        <h3> Science sources</h3>
+         <ul>
+           {{ macro.displaySourceList(science)}}
+        </ul>
 
-  <!-- Sports section  -->
-  <h3> Sports </h3>
-  <ul>
-    {{ macro.displayNewsList(sports)}}
-  </ul>
+        <!-- Entertainment source section  -->
+        <h3> Entertainment sources</h3>
+         <ul>
+           {{ macro.displaySourceList(entertainment)}}
+        </ul>
 
-  <!-- Technology section  -->
-  <h3> Technology </h3>
-  <ul>
-      {{ macro.displayNewsList(technology)}}
-  </ul>
+        <!-- Health source section  -->
+        <h3> Health sources</h3>
+         <ul>
+           {{ macro.displaySourceList(health)}}
+        </ul>
 
-  {% endblock%}
-</body>
-</html>
+        <!-- Sports source section  -->
+        <h3> Sports sources</h3>
+         <ul>
+           {{ macro.displaySourceList(sports)}}
+        </ul>
+
+        <!-- Technology source section  -->
+        <h3> Technology sources</h3>
+         <ul>
+           {{ macro.displaySourceList(technology)}}
+        </ul>
+
+{% endblock%}
