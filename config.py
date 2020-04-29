@@ -4,15 +4,12 @@ class Config:
     '''
     General configuration parent class
     '''
-    SOURCE_API_BASE_URL='http://newsapi.org/v2/top-headlines?sources={}&apiKey={}'
-    NEWS_API_BASE_URL = 'http://newsapi.org/v2/top-headlines?sources={}&apiKey={}'
+    SOURCE_BASE_URL='https://newsapi.org/v2/sources?category={}&apiKey={}'
+    ARTICLE_BASE_URL = 'http://newsapi.org/v2/top-headlines?sources={}&apiKey={}'
+    SOURCE_API_KEY = os.environ.get ('SOURCE_API_KEY')
 
-    https://newsapi.org/v2/sources?language=en&category=sports&apiKey={}
-    https://newsapi.org/v2/sources?language=en&apiKey={}
+    # http://newsapi.org/v2/top-headlines?sources={}&apiKey
 
-    'http://newsapi.org/v2/top-headlines?country=us&category={}&apiKey={}'
-    NEWS_API_KEY = os.environ.get ('NEWS_API_KEY')
-    SECRET_KEY = os.environ.get ('SECRET_KEY')
 
 
 class ProdConfig(Config):

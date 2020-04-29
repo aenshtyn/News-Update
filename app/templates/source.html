@@ -1,0 +1,19 @@
+{% extends 'base.html'%}
+{% import 'macros.html' as macro%}
+<!-- Content block -->
+{% block content %}
+<div class="container">
+
+    <!-- Poster background -->
+    <<div class="articles">
+        <h3><img src="../static/images/logo.jpg" alt="" width="150px" height="75px"> | {{id}} | Top News Articles</h3>
+		<hr />
+        <ul class="unstyled">
+            <div>
+        	   {{ macro.displayArticlesList(articles) }}
+            </div>
+        </ul>
+    </div>
+
+</div>
+{% endblock %}
