@@ -4,53 +4,88 @@
 <!-- Styles block -->
 
 {% block styles%}
-    {{ super() }}
-    <link rel="stylesheet" href="{{url_for('static',filename='css/index.css')}}">
+{{ super() }}
+<link rel="stylesheet" href="{{url_for('static',filename='css/index.css')}}">
 {% endblock %}
 
 
 {% block content %}
+<main class="container-fluid">
+  <div class="source_section">
+    <!-- Business source section  -->
+    <h3> Business sources</h3>
+    <ul>
+      <div class = row>
+        {{ macro.displaySourceList(business)}}
+      </div>
+    </ul>
+  </div>
 
-        <!-- Business source section  -->
-        <h3> Business sources</h3>
-         <ul>
-           {{ macro.displaySourceList(business)}}
-        </ul>
+  <hr />
+  <div class = source_section>
+    <!-- General source section  -->
+    <h3> General sources</h3>
+    <ul>
+      <div class = row>
+        {{ macro.displaySourceList(general)}}
+      </div>
+    </ul>
+</div>
+      <hr />
 
-        <!-- General source section  -->
-        <h3> General sources</h3>
-         <ul>
-           {{ macro.displaySourceList(general)}}
-        </ul>
+    <div class = source_section>
+      <!-- Science source section  -->
+      <h3> Science sources</h3>
+      <ul>
+        <div class = row>
+          {{ macro.displaySourceList(science)}}
+        </div>
+      </ul>
+    </div>
+          <hr />
 
-        <!-- Science source section  -->
-        <h3> Science sources</h3>
-         <ul>
-           {{ macro.displaySourceList(science)}}
-        </ul>
-
+      <div class = source_section>
         <!-- Entertainment source section  -->
         <h3> Entertainment sources</h3>
-         <ul>
-           {{ macro.displaySourceList(entertainment)}}
-        </ul>
+        <ul>
+          <div class = row>
+            {{ macro.displaySourceList(entertainment)}}
+          </div>
+        </div>
+              <hr />
 
-        <!-- Health source section  -->
-        <h3> Health sources</h3>
-         <ul>
-           {{ macro.displaySourceList(health)}}
-        </ul>
 
+    <div class = source_section>
+      <!-- Health source section  -->
+      <h3> Health sources</h3>
+      <ul>
+        <div class = row>
+          {{ macro.displaySourceList(health)}}
+        </div>
+      </ul>
+    </div>
+          <hr />
+
+      <div class = source_section>
         <!-- Sports source section  -->
         <h3> Sports sources</h3>
-         <ul>
-           {{ macro.displaySourceList(sports)}}
+        <ul>
+          <div class = row>
+            {{ macro.displaySourceList(sports)}}
+          </div>
         </ul>
+      </div>
+            <hr />
 
-        <!-- Technology source section  -->
-        <h3> Technology sources</h3>
-         <ul>
-           {{ macro.displaySourceList(technology)}}
-        </ul>
-
-{% endblock%}
+        <div class = source_section>
+          <!-- Technology source section  -->
+          <h3> Technology sources</h3>
+          <ul>
+            <div class = row>
+              {{ macro.displaySourceList(technology)}}
+            </div>
+          </ul>
+        </div>
+              <hr />
+    </main>
+    {% endblock%}
