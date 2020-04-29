@@ -1,5 +1,5 @@
 # Project Name
-## News Updates app (https://moha-news-update.herokuapp.com)/
+## News Updates app (https://moha-news-update2.herokuapp.com)
 
 
 #### Built by
